@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "3c03f641-ddd8-4fbc-a8e8-04aec133f3ab",
+		"name": "Nikola Mijatovic",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13665928"
+	},
+	"item": [
+		{
+			"name": "user/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Nikola Mijatovic\",\r\n  \"email\": \"nikola@mijatovic.loc\",\r\n  \"password\": \"1234\",\r\n  \"password_confirmation\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/register",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"nikola@mijatovic.loc\",\r\n  \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMWNlNTNmODI1NTg1ZTI5NWJkMGMwYzA2MTMzMDIxOGVmZmYzMTk3YjQ3YmE4NTUxNTdmNGRmYmNjMTM1OGI3YjA2OTM3NTUzZGI2MDUxNTkiLCJpYXQiOjE2NzIyNTU5MDcuNTQwNzQ2LCJuYmYiOjE2NzIyNTU5MDcuNTQwNzQ4LCJleHAiOjE3MDM3OTE5MDcuNTM3NTI3LCJzdWIiOiIxMCIsInNjb3BlcyI6W119.FfSO1IM1XXfOd-ndPhM52wpSpxolrpsf080czhof8GcI8TIdJQJIDZNRD6XYsSPFCFhlZflUyuhX98nPq9ktC-ZG7p5yy8ylOR7KRHPA3wk53oeWjt0QxnD1kTYQdbacu6ydEPWsqEKDeFmluavmD_gn5z7ZnTAIBKsLBchQs_LqH2z9p3KxALetqB_KbVF4uYEBT8GwlI2gkbj6BY5VA1Ymme2FFNONY3po-uz0bMzThg8dHkBzHj47MFfzyPkxheAwXAWlM8XzjKA8gkzj0UvuGkSKDDAZiQExdU7HTcUGTAqBHY-HOb1AtJMbmrSAhrhoS6DhYyCSOTbgdBIbryg88Fl95vd9oWYbLTenh9C1PQ2ob12w9S99WsW6-0fWOE66u40GhKZNnLrV5gZLtxKYZk8Eq4elRUboB6rS_leFVpFQ3tNIN2FUiH71XlhZlAA3WN5WU6Lb91UgR8oBpURoH_hAyExGnZV2tui0OTRD8FtoewkCQSvsZ825aw7uxHox3dJ5vQQ4ZpCSjdiAePrZ5a70JtY7ZEHwm3ly9y8hatMQK6JRMEuGTnNG7CDmt_i91y1REocmthyHBcdA6m79cuBDST0A1vLF5b9psN43K77rc_K2u6ufw0ZDEWZtlL4-UEZ6UJamGidQLdjmxpeVoR3jiQn8I7NWp7kkYSo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"user_id\": 10,\r\n  \"room_id\": 1,\r\n  \"start_date\": \"2023-12-28\",\r\n  \"end_date\": \"2024-12-28\",\r\n  \"people\": 1,\r\n  \"with_breakfast\": true,\r\n  \"with_lunch\": true,\r\n  \"with_dinner\": true,\r\n  \"with_minibar\": true,\r\n  \"with_laundry\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "api.qa.rs/api",
+			"type": "string"
+		}
+	]
+}
